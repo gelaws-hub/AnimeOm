@@ -1,0 +1,24 @@
+.linkPrimary{
+    display: inline-block;
+    width: 80%;
+    height: 32px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #47057D;
+    color: white;
+    line-height: 32px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.linkPrimary:hover{
+    background-color: #0265a2;
+}
+
+
+@media screen and (min-width:768px) {
+    .linkPrimary{
+        width: 30%;
+        height: 36px;
+    }
+}

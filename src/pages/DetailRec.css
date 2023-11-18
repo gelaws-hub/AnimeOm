@@ -1,0 +1,120 @@
+/* DetailRec.css */
+
+.layoutStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contentDetailRec {
+  background-color: rgba(5, 4, 28, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Updated */
+  text-align: justify;
+  margin-bottom: 10vw;
+}
+
+.imageContainer {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.CardDetailRec {
+  text-align: justify;
+  max-width: 640px; /* Updated */
+  margin: auto; /* Updated */
+}
+
+.contentAnime {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: justify;
+  color: rgb(227, 136, 84);
+}
+
+.buttonProps {
+  display: grid;
+  grid-gap: 1px;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(112, 94, 210, 0.16);
+  border-radius: 5px;
+}
+
+.buttonInfo{
+  color: #e4e4e4;
+}
+
+.p {
+  line-height: 1; /* Set line-height to 1 or use 'normal' */
+  margin: 0; /* Optionally, you can set margin to 0 to ensure no additional space */
+  color:#e4e4e4
+}
+
+.animePlayer,
+iframe {
+  display: grid;
+  align-items: center;
+  width: 640px;
+  height: 480px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: rgba(91, 52, 219, 0.227);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.sinopsisContainer {
+  display: flex;
+  justify-content: justify;
+  text-align: justify;
+}
+
+.sinopsisText {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-align: justify;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .CardDetailRec {
+    max-width: 100%; /* Updated */
+  }
+
+  .animePlayer,
+  iframe {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 45vw;
+    border: none;
+  }
+}

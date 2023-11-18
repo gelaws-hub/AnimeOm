@@ -1,0 +1,35 @@
+
+.contentWelcome {
+    text-align: center;
+}
+
+
+.contentWelcomeImg{
+    width: 360px;
+    margin-bottom: 20px;
+}
+
+.contentWelcomeTitle{
+    text-align: center;
+    color: rgb(245, 91, 35);
+    font-size: 36px;
+    line-height: 16px;
+}
+
+.contentWelcomeBody{
+    position: relative;
+    color: #ececec;
+    line-height: 26px;
+    font-size: 18px;
+}
+
+@media screen and (min-width:768px) {
+    .contentWelcome{
+        padding-top: 10px;
+    }
+
+    .contentWelcomeBody{
+        margin: auto;
+        width: 80%;
+    }
+}

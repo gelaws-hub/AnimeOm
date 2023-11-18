@@ -1,0 +1,37 @@
+.containerWelcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#welcome {
+    font-family: 'Poppins';
+    font-size: 36px;
+    color: #F39650;
+    width: 100%;
+}
+
+#welcomeMessage2 {
+    font-family: 'Poppins';
+    font-size: 18px;
+    color: #e2e2e2;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .containerWelcome {
+        transform: translate(-50%, -50%) scale(0.7); /* Adjust the scale factor as needed */
+    }
+
+    #welcome {
+        font-size: 28px;
+    }
+
+    #welcomeMessage2 {
+        font-size: 20px;
+    }
+}

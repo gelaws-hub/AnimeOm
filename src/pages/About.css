@@ -1,0 +1,47 @@
+.contentAbout {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10 10px rgba(0, 0, 0, 0.5);
+    margin: 50px ;
+}
+
+
+.contentAboutImg{
+    width: 360px;
+}
+
+.contentAboutTitle{
+    color: #47057D;
+    font-size: 36px;
+    line-height: 16px;
+}
+
+.contentAboutBody{
+    color: #eeeeee;
+    line-height: 32px;
+    font-size: 28px;
+    margin: 10px;
+}
+
+.contentAboutBody2{
+    color: #e3e3e3;
+    line-height: 24px;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .contentAboutBody{
+        margin: auto;
+        width: 50%;
+    }
+    .contentAbout {
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 10 10px rgba(0, 0, 0, 0.5);
+        margin: 200px ;
+    }
+}

@@ -1,0 +1,55 @@
+.RecCard {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  overflow: hidden; /* Add overflow: hidden to prevent image overflow */
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  background-color: #47057d75;
+  border-radius: 10px;
+  overflow: hidden; /* Add overflow: hidden to prevent image overflow */
+}
+
+.thumbnail {
+  max-width: 100px; /* Adjust the size as needed */
+  height: 100%; /* Set the height to match the container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 8px;
+  margin-right: 10px;
+}
+
+.text {
+  flex: 1;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Adjusted to move the title up */
+  text-align: left;
+  color: #f55b23;
+}
+
+.sinopsis {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-align: justify;
+  margin-right: 10px;
+  color: #e2e2e2;
+}
+
+/* Additional styling for the image */
+.thumbnail img {
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: 100%; /* Ensure the image takes the full height of the container */
+}

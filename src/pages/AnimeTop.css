@@ -1,0 +1,30 @@
+/* AnimeTop.css */
+
+.contentTop {
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.pageButtons {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pageNumber {
+  color: white;
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contentTop {
+    padding-top: 10px;
+    width: 40%;
+    margin: auto;
+  }
+}

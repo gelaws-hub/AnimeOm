@@ -1,0 +1,38 @@
+
+.contentRec {
+  padding-top: 10px;
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.searchBar {
+  margin-bottom: 10px;
+}
+
+.searchBar input {
+  padding: 8px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchBar button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchBar button:hover {
+  background-color: #2980b9;
+}
+
+@media screen and (min-width: 768px) {
+  .contentRec {
+    padding-top: 10px;
+    width: 40%;
+    margin: auto;
+  }
+}

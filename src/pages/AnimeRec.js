@@ -17,7 +17,7 @@ export default function AnimeRec() {
         const response = await axios.get('https://api.npoint.io/3e511211141379ab8949/');
         if (response.status === 200) {
           setData(response.data);
-          setFilteredData(response.data); // Initialize filteredData with all data
+          setFilteredData(response.data);
         }
       } catch (err) {
         console.log('err', err);
@@ -37,6 +37,8 @@ export default function AnimeRec() {
     setFilteredData(filtered);
   };
 
+  console.log('isLoading', isLoading); // Add this line to check the loading state
+
   return (
     <Layout>
       <div className="contentRec">
@@ -50,12 +52,12 @@ export default function AnimeRec() {
           <button onClick={handleSearch}>Search</button>
         </div>
         {isLoading ? (
-          <p>Please wait</p>
+          <p className='loadingText'>Please wait...</p> // Adjust the style as needed
         ) : (
           filteredData.map(function (item, index) {
             return (
               <div key={index}>
-                <Gap height={10} />
+                <Gap height={0} />
                 <CardAnimeRec Rec={item} />
               </div>
             );

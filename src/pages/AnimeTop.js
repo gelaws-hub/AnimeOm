@@ -2,7 +2,6 @@
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Gap from '../components/Gap';
 import CardAnimeTop from '../components/CardAnimeTop';
 import Layout from '../components/Layout';
 import './AnimeTop.css';
@@ -35,6 +34,7 @@ export default function AnimeTop() {
 
   useEffect(() => {
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]); // Trigger fetchData when currentPage changes
 
   return (
@@ -49,7 +49,7 @@ export default function AnimeTop() {
           <button onClick={() => handlePageChange(currentPage + 1)}>Next Page</button>
         </div>
         {isLoading ? (
-          <p>Please wait</p>
+          <p className='loadingText'>Please wait...</p>
         ) : (
           data?.map((item, index) => (
             <div key={index}>

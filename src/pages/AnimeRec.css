@@ -36,3 +36,9 @@
     margin: auto;
   }
 }
+
+.loadingText{
+  color: #f55b23;
+  font-size: large;
+  font-weight: bold;
+}

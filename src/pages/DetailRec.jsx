@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import safe from "react-safe"
 import Layout from "../components/Layout";
 import Gap from "../components/Gap";
 import "./DetailRec.css";
@@ -81,11 +82,23 @@ export default function DetailRec() {
               <p className="buttonInfo">Ganti Platform kalau tidak bisa diputar <br/>
                 Current Platform: {currentPlatform === "video" ? "Google Drive" : "YouTube"}</p>
               <button onClick={togglePlatform}>Switch Platform</button>
-              </div>
+              </div> <br/>
+              <div className="disqussThread" id="disqus_thread"></div>
             </div>
           </>
         )}
       </div>
+      <safe.script>
+        {
+              (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://animeom.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })()
+        }
+      </safe.script>
+      
     </Layout>
   );
 }

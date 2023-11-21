@@ -118,3 +118,10 @@ button:hover {
     border: none;
   }
 }
+
+.disqussThread{
+  background-color: #47057d;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 95%;
+}

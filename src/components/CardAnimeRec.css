@@ -34,7 +34,7 @@
 h2 {
   font-size: 18px;
   margin-top: 10px;
-  margin-bottom: 10px; /* Adjusted to move the title up */
+  margin-bottom: 10px;
   text-align: left;
   color: #f55b23;
 }
@@ -48,8 +48,8 @@ h2 {
   color: #e2e2e2;
 }
 
-/* Additional styling for the image */
+
 .thumbnail img {
-  width: 100%; /* Ensure the image takes the full width of the container */
-  height: 100%; /* Ensure the image takes the full height of the container */
+  width: 100%; 
+  height: 100%; 
 }

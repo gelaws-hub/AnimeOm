@@ -15,7 +15,7 @@ export default function CardAnimeTop({ anime }) {
   return (
     <Link to={`/DetailTop/${anime.mal_id}`} className="cardLink">
       <div className="cardContent">
-        <div className="thumbnailContainer">
+        <div className="thumbnail">
           <img className="thumbnail" src={anime.images.jpg.image_url} alt={anime.title} />
         </div>
         <div className="text">

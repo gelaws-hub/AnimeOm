@@ -37,7 +37,6 @@ export default function AnimeRec() {
     setFilteredData(filtered);
   };
 
-  console.log('isLoading', isLoading); // Add this line to check the loading state
 
   return (
     <Layout>

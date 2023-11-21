@@ -20,7 +20,7 @@ export default function CardAnimeTop({ anime }) {
         </div>
         <div className="text">
           <h2 title={anime.title}>{truncatedTitle}</h2>
-          <p className="sinopsis">{truncateText(anime.synopsis, 200)}</p>
+          <p className="sinopsis">{truncateText(anime.synopsis, 100)}</p>
         </div>
       </div>
     </Link>

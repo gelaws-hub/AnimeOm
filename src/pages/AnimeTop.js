@@ -49,7 +49,7 @@ export default function AnimeTop() {
           <button onClick={() => handlePageChange(currentPage + 1)}>Next Page</button>
         </div>
         {isLoading ? (
-          <p className='loadingText'>Please wait...</p>
+          <p className='loadingText'>Tunggu ngab...</p>
         ) : (
           data?.map((item, index) => (
             <div key={index}>

@@ -52,7 +52,7 @@ export default function AnimeRec() {
           <button onClick={handleSearch}>Search</button>
         </div>
         {isLoading ? (
-          <p className='loadingText'>Please wait...</p> // Adjust the style as needed
+          <p className='loadingText'>Tunggu ngab...</p> // Adjust the style as needed
         ) : (
           filteredData.map(function (item, index) {
             return (

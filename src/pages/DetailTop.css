@@ -5,7 +5,7 @@
     text-align: center;
     color: white;
     padding: 20px;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
   }
   
   .thumbnailContainer {
@@ -25,4 +25,17 @@
   p {
     margin: 0;
     color: white;
+  }
+
+  .disqussThread{
+    margin-bottom: 120px;
+  }
+
+  .topInfo{
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .boldText{
+    color: #f55b23;
   }

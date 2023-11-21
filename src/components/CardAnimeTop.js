@@ -23,6 +23,6 @@ export default function CardAnimeTop({ anime }) {
           <p className="sinopsis">{truncateText(anime.synopsis, 200)}</p>
         </div>
       </div>
-      </Link>
+    </Link>
   );
 }

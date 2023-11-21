@@ -17,6 +17,7 @@
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
+    text-decoration: none;
 }
 
 .thumbnailContainer {
@@ -40,6 +41,7 @@
 
 .text {
     flex: 1;
+    text-decoration: none;
 }
 
 h2 {
@@ -57,4 +59,8 @@ h2 {
     text-align: justify;
     margin-right: 10px;
     color: #e2e2e2;
+}
+
+.cardLink{
+    text-decoration: none;
 }

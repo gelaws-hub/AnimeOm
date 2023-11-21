@@ -52,7 +52,7 @@ export default function DetailRec() {
     <Layout className="layoutStyle">
       <div className="contentDetailRec">
         {isLoading ? (
-          <p>Please wait</p>
+          <p className="loadingText">Tunggu ngab...</p>
         ) : (
           <>
             <img className="imageContainer" src={data.Image} alt="Movie Cover" />

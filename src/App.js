@@ -9,6 +9,7 @@ import Welcome from './pages/Welcome'
 import AnimeRec from './pages/AnimeRec'
 import AnimeTop from './pages/AnimeTop'
 import DetailRec from './pages/DetailRec'
+import DetailTop from './pages/DetailTop'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/AnimeRec" element={<AnimeRec />} />
         <Route path="/AnimeTop" element={<AnimeTop/>} />
         <Route path="/DetailRec/:id_anime" element={<DetailRec/>} />
+        <Route path="/DetailTop/:mal_id" element={<DetailTop />} /> {/* Use ":id" as the parameter name */}
       </Routes>
       <footer>
         <NavLink to="/Home" className="iconWrapper">

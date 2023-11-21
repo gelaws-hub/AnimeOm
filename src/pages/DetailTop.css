@@ -1,0 +1,28 @@
+.contentDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-bottom: 120px;
+  }
+  
+  .thumbnailContainer {
+    margin-top: 20px;
+  }
+  
+  .thumbnail {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .synopsis {
+    text-align: justify;
+    margin-top: 20px;
+  }
+  
+  p {
+    margin: 0;
+    color: white;
+  }

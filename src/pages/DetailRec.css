@@ -120,7 +120,7 @@ button:hover {
 }
 
 .disqussThread{
-  background-color: #47057d;
+  background-color: rgba(16, 16, 16, 0.8);
   border-radius: 5px;
   padding: 10px;
   opacity: 95%;

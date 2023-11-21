@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -46,6 +47,7 @@ export default function DetailRec() {
     );
   };
 
+  const newLocal = <div className="disqussThread" id="disqus_thread"></div>;
   return (
     <Layout className="layoutStyle">
       <div className="contentDetailRec">
@@ -82,8 +84,8 @@ export default function DetailRec() {
               <p className="buttonInfo">Ganti Platform kalau tidak bisa diputar <br/>
                 Current Platform: {currentPlatform === "video" ? "Google Drive" : "YouTube"}</p>
               <button onClick={togglePlatform}>Switch Platform</button>
-              </div> <br/>
-              <div className="disqussThread" id="disqus_thread"></div>
+              </div>
+              {newLocal}
             </div>
           </>
         )}

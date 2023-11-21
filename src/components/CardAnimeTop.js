@@ -1,5 +1,3 @@
-// CardAnimeTop.js
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CardAnimeTop.css";
@@ -15,6 +13,7 @@ export default function CardAnimeTop({ anime }) {
   const truncatedTitle = truncateText(anime.title, 20); // Adjust the maximum length as needed
 
   return (
+    <Link to={`/DetailTop/${anime.mal_id}`} className="cardLink">
       <div className="cardContent">
         <div className="thumbnailContainer">
           <img className="thumbnail" src={anime.images.jpg.image_url} alt={anime.title} />
@@ -24,5 +23,6 @@ export default function CardAnimeTop({ anime }) {
           <p className="sinopsis">{truncateText(anime.synopsis, 200)}</p>
         </div>
       </div>
+      </Link>
   );
 }

@@ -61,6 +61,7 @@ export default function AnimeTop() {
             type="text"
             placeholder="Search by title..."
             value={searchTerm}
+            onChange={handleSearch}
           />
           <button onClick={handleSearch}>Search</button>
         </div>

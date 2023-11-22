@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import "./Welcome.css";
 
 export default function Welcome() {

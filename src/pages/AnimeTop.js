@@ -8,7 +8,7 @@ export default function AnimeTop() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   const fetchTop = async () => {
@@ -37,22 +37,19 @@ export default function AnimeTop() {
   const searchAnime = async () => {
     try {
       const response = await axios.get(
-        `https://api.jikan.moe/v4/top/anime?q=title:${searchQuery}`
+        `https://api.jikan.moe/v4/anime?q=title:${searchQuery}`
       );
-
       setSearchResults(response.data.results || []); // Handle undefined results
     } catch (error) {
-      console.error('Error searching for Anime:', error);
+      console.error("Error searching for Anime:", error);
     }
   };
 
   const filteredData = data
-    ? data.filter(
-        (item) =>
-          item.titles.some(
-            (title) =>
-              title.title.toLowerCase().includes(searchQuery.toLowerCase())
-          )
+    ? data.filter((item) =>
+        item.titles.some((title) =>
+          title.title.toLowerCase().includes(searchQuery.toLowerCase())
+        )
       )
     : [];
 
@@ -65,30 +62,19 @@ export default function AnimeTop() {
     <Layout>
       <div className="contentTop">
         <h2>Top Anime</h2>
-
-        <form onSubmit={(e) => { e.preventDefault(); searchAnime(); }}>
         <div className="searchBar">
           <input
-            id='searchBar'
+            id="searchBar"
             type="text"
             placeholder="Search by title..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button type="submit" id='searchButton'>Search</button>
+          <button type="submit" id="searchButton" onClick={searchAnime}>
+            Search
+          </button>
         </div>
-      </form>
-
-        {searchResults.length > 0 ? (
-          <div>
-            <h3>Search Results</h3>
-            {searchResults.map((result) => (
-              <div key={result.mal_id}>
-                <CardAnimeTop anime={result} />
-              </div>
-            ))}
-          </div>
-        ) : (
+        <div>
           <div>
             <div className="pageButtons">
               <button
@@ -125,7 +111,7 @@ export default function AnimeTop() {
               </button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </Layout>
   );

@@ -10,14 +10,17 @@
 }
 
 .searchBar input {
+  background: #00000073;
+  color: white;
   padding: 8px;
   margin-right: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  
 }
 
 .searchBar button {
-  background-color: #3498db;
+  background-color: #47057d80;
   color: #fff;
   padding: 8px 16px;
   border: none;

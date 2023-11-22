@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import { HiHome } from 'react-icons/hi'
-import { MdGroup } from 'react-icons/md'
+import { MdGroup,  MdLeaderboard, MdOndemandVideo } from 'react-icons/md'
 import './App.css'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -29,6 +29,14 @@ function App() {
         <NavLink to="/Home" className="iconWrapper">
           <HiHome className="icon" />
           Home
+        </NavLink>
+        <NavLink to="/AnimeTop" className="iconWrapper">
+          <MdLeaderboard className="icon" />
+          Top Anime
+        </NavLink>
+        <NavLink to="/AnimeRec" className="iconWrapper">
+          <MdOndemandVideo className="icon" />
+          Nonton Anime
         </NavLink>
         <NavLink to="/About" className="iconWrapper">
           <MdGroup className="icon" />

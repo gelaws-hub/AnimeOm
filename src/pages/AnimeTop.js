@@ -8,7 +8,8 @@ export default function AnimeTop() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   const fetchTop = async () => {
     try {
@@ -16,10 +17,10 @@ export default function AnimeTop() {
         `https://api.jikan.moe/v4/top/anime?page=${currentPage}`
       );
       if (response.status === 200) {
-        setData(response.data.data); // Assuming the data is in the 'data' field
+        setData(response.data.data);
       }
     } catch (err) {
-      console.log("err", err);
+      console.error("Error fetching top anime:", err);
     }
   };
 
@@ -33,8 +34,16 @@ export default function AnimeTop() {
     setCurrentPage(newPage);
   };
 
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
+  const searchAnime = async () => {
+    try {
+      const response = await axios.get(
+        `https://api.jikan.moe/v4/top/anime?q=title:${searchQuery}`
+      );
+
+      setSearchResults(response.data.results || []); // Handle undefined results
+    } catch (error) {
+      console.error('Error searching for Anime:', error);
+    }
   };
 
   const filteredData = data
@@ -42,7 +51,7 @@ export default function AnimeTop() {
         (item) =>
           item.titles.some(
             (title) =>
-              title.title.toLowerCase().includes(searchTerm.toLowerCase())
+              title.title.toLowerCase().includes(searchQuery.toLowerCase())
           )
       )
     : [];
@@ -50,55 +59,73 @@ export default function AnimeTop() {
   useEffect(() => {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPage]); // Trigger fetchData when currentPage changes
+  }, [currentPage]);
 
   return (
     <Layout>
       <div className="contentTop">
         <h2>Top Anime</h2>
+
+        <form onSubmit={(e) => { e.preventDefault(); searchAnime(); }}>
         <div className="searchBar">
           <input
+            id='searchBar'
             type="text"
             placeholder="Search by title..."
-            value={searchTerm}
-            onChange={handleSearch}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button onClick={handleSearch}>Search</button>
+          <button type="submit" id='searchButton'>Search</button>
         </div>
-        <div className="pageButtons">
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-          >
-            Previous Page
-          </button>
-          <span className="pageNumber">Page {currentPage}</span>
-          <button onClick={() => handlePageChange(currentPage + 1)}>
-            Next Page
-          </button>
-        </div>
-        {isLoading ? (
-          <p className="loadingText">Tunggu ngab...</p>
+      </form>
+
+        {searchResults.length > 0 ? (
+          <div>
+            <h3>Search Results</h3>
+            {searchResults.map((result) => (
+              <div key={result.mal_id}>
+                <CardAnimeTop anime={result} />
+              </div>
+            ))}
+          </div>
         ) : (
-          filteredData.map((item, index) => (
-            <div key={index}>
-              <CardAnimeTop anime={item} />
+          <div>
+            <div className="pageButtons">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                Previous Page
+              </button>
+              <span className="pageNumber">Page {currentPage}</span>
+              <button onClick={() => handlePageChange(currentPage + 1)}>
+                Next Page
+              </button>
             </div>
-          ))
+            {isLoading ? (
+              <p className="loadingText">Tunggu ngab...</p>
+            ) : (
+              filteredData.map((item) => (
+                <div key={item.mal_id}>
+                  <CardAnimeTop anime={item} />
+                </div>
+              ))
+            )}
+            {/* Duplicate the pageButtons section for the buttons at the bottom */}
+            <div className="pageButtons">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                Previous Page
+              </button>
+              <span className="pageNumber">Page {currentPage}</span>
+              <button onClick={() => handlePageChange(currentPage + 1)}>
+                Next Page
+              </button>
+            </div>
+          </div>
         )}
-        {/* Duplicate the pageButtons section for the buttons at the bottom */}
-        <div className="pageButtons">
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-          >
-            Previous Page
-          </button>
-          <span className="pageNumber">Page {currentPage}</span>
-          <button onClick={() => handlePageChange(currentPage + 1)}>
-            Next Page
-          </button>
-        </div>
       </div>
     </Layout>
   );

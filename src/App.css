@@ -14,6 +14,11 @@
   }
 }
 
+.activeLink {
+  background-color: rgb(209, 13, 13); /* Change this to the desired color for the active link */
+  color: #202020; /* Change this to the desired text color for the active link */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -104,3 +109,5 @@ footer {
   background: #24233b;
   box-shadow: inset 0px 0px 0px 0px #f0f0f0;
 }
+
+

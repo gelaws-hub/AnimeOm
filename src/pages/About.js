@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Layout from "../components/Layout";
 import "./About.css";
 

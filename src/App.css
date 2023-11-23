@@ -14,9 +14,9 @@
   }
 }
 
-.activeLink {
-  background-color: rgb(209, 13, 13); /* Change this to the desired color for the active link */
-  color: #202020; /* Change this to the desired text color for the active link */
+.iconWrapper.active {
+  /* Add your styles for active links with both iconWrapper and active classes */
+  border-bottom: 2px solid #f55b23; /* Example: Add a bottom border for active links */
 }
 
 .App-header {

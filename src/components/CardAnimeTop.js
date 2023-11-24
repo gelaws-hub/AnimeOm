@@ -13,7 +13,7 @@ export default function CardAnimeTop({ anime }) {
   const truncatedTitle = truncateText(anime.title, 20); // Adjust the maximum length as needed
 
   return (
-    <Link to={`/DetailTop/${anime.mal_id}`} className="cardLink">
+    <Link to={`/AnimeTop/Detail/${anime.mal_id}`} className="cardLink">
       <div className="cardContent">
         <div className="thumbnail">
           <img className="thumbnail" src={anime.images.jpg.image_url} alt={anime.title} />

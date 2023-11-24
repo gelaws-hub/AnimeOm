@@ -21,24 +21,40 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/AnimeRec" element={<AnimeRec />} />
         <Route path="/AnimeTop" element={<AnimeTop />} />
-        <Route path="/AnimeTopSearch" element={<AnimeTopSearch />} />
-        <Route path="/DetailRec/:id_anime" element={<DetailRec />} />
-        <Route path="/DetailTop/:mal_id" element={<DetailTop />} />
+        <Route path="/AnimeTop/Search" element={<AnimeTopSearch />} />
+        <Route path="/AnimeRec/Detail/:id_anime" element={<DetailRec />} />
+        <Route path="/AnimeTop/Detail/:mal_id" element={<DetailTop />} />{" "}
       </Routes>
       <footer>
-        <NavLink to="/Home" className="iconWrapper" activeClassName="activeLink">
+        <NavLink
+          to="/Home"
+          className="iconWrapper"
+          activeClassName="activeLink"
+        >
           <HiHome className="icon" />
           Home
         </NavLink>
-        <NavLink to="/AnimeTop" className="iconWrapper" activeClassName="activeLink">
+        <NavLink
+          to="/AnimeTop"
+          className="iconWrapper"
+          activeClassName="activeLink"
+        >
           <MdLeaderboard className="icon" />
           Top Anime
         </NavLink>
-        <NavLink to="/AnimeRec" className="iconWrapper" activeClassName="activeLink">
+        <NavLink
+          to="/AnimeRec"
+          className="iconWrapper"
+          activeClassName="activeLink"
+        >
           <MdOndemandVideo className="icon" />
           Nonton Anime
         </NavLink>
-        <NavLink to="/About" className="iconWrapper" activeClassName="activeLink">
+        <NavLink
+          to="/About"
+          className="iconWrapper"
+          activeClassName="activeLink"
+        >
           <MdGroup className="icon" />
           About
         </NavLink>

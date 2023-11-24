@@ -39,7 +39,7 @@ const AnimeTop = () => {
       const response = await axios.get(`https://api.jikan.moe/v4/anime?q=${searchQuery}`);
       const searchData = response.data?.data; // Adjust this line to match the structure
       console.log('Search Data AnimeTop:', searchData);
-      navigate('/AnimeTopSearch', { state: { searchData } });
+      navigate('/AnimeTop/Search', { state: { searchData } });
     } catch (err) {
       console.log('Error:', err);
     }

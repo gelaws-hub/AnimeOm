@@ -125,3 +125,8 @@ button:hover {
   padding: 10px;
   opacity: 95%;
 }
+
+.activeEpisode {
+  font-weight: bold;
+  color: #f55b23;
+}

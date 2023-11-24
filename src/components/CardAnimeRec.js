@@ -13,7 +13,7 @@ export default function CardAnimeRec({ Rec }) {
   const truncatedTitle = truncateText(Rec.Judul, 20); // Adjust the maximum length as needed
 
   return (
-    <Link to={`/DetailRec/${Rec.id_anime}`} className="cardLink">
+    <Link to={`/AnimeRec/Detail/${Rec.id_anime}`} className="cardLink">
       <div className="cardContent">
         <img className="thumbnail" src={Rec.Image} alt={Rec.Judul} />
         <div className="text">

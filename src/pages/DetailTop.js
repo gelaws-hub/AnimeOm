@@ -41,7 +41,8 @@ export default function DetailTop() {
             <div className="topInfo">
               <p>
                 <strong className="boldText">Type: </strong>
-                {animeDetail.type}, <br />
+                {animeDetail.type}
+                <br />
                 <strong className="boldText">Episodes:</strong>{" "}
                 {animeDetail.episodes}
               </p>

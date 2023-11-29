@@ -17,8 +17,7 @@
 }
 
 .thumbnail {
-  max-width: 100px; /* Adjust the size as needed */
-  height: 100%; /* Set the height to match the container */
+  max-width: 100px; /* Adjust the size as needed */ /* Set the height to match the container */
   object-fit: cover; /* Maintain aspect ratio while covering the container */
   border-top-left-radius: 8px;
   border-top-right-radius: 0;

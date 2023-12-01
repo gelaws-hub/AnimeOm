@@ -6,3 +6,6 @@ Muhamad Ibnu Fadhil
 
 the app is deployed using firebase :
 https://ta-ppb-animeom.web.app/
+
+vercel :
+https://anime-om.vercel.app/
